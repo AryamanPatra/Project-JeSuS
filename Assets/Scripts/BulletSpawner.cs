@@ -10,10 +10,6 @@ public class BulletSpawner : MonoBehaviour
     Rigidbody BulletRB;
 
     
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

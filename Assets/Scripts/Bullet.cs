@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
         if (col.gameObject.tag == "Enemy"){
             Destroy(col.gameObject);
             Destroy(gameObject);
+            ScoreManager.instance.AddPoint();
             Debug.Log("Kill");
         }
     }

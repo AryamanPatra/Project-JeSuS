@@ -14,7 +14,6 @@ public class Bullet : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(gameObject);
             ScoreManager.instance.AddPoint();
-            Debug.Log("Kill");
         }
     }
     
@@ -22,6 +21,5 @@ public class Bullet : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(7);
         Destroy(gameObject);
-        Debug.Log("Missed");
     }
 }

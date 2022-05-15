@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 1393852055}
   - component: {fileID: 1393852057}
   - component: {fileID: 1393852056}
+  - component: {fileID: 1393852058}
   m_Layer: 5
   m_Name: Highscore
   m_TagString: Untagged
@@ -501,8 +502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 122.31415, y: -71.7}
-  m_SizeDelta: {x: 211.3262, y: 30}
+  m_AnchoredPosition: {x: 132.81, y: -65.8}
+  m_SizeDelta: {x: 241.6205, y: 23.3341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393852056
 MonoBehaviour:
@@ -525,19 +526,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 067ede88f0f865943b22c7e47d7db343, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 01963ec46c1abd547bafd0ac51a0fc9d, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 16
-    m_MaxSize: 23
-    m_Alignment: 4
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 18
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HIGHSCORE
+  m_Text: 'Highscore:'
 --- !u!222 &1393852057
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -546,6 +547,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393852054}
   m_CullTransparentMesh: 1
+--- !u!114 &1393852058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393852054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.4, y: -1.4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1798597469
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +815,7 @@ GameObject:
   - component: {fileID: 2013167788}
   - component: {fileID: 2013167790}
   - component: {fileID: 2013167789}
+  - component: {fileID: 2013167791}
   m_Layer: 5
   m_Name: score
   m_TagString: Untagged
@@ -822,7 +839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.53949, y: -23.342499}
+  m_AnchoredPosition: {x: 115.54, y: -26.9}
   m_SizeDelta: {x: 207.0789, y: 26.685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2013167789
@@ -846,7 +863,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 067ede88f0f865943b22c7e47d7db343, type: 3}
+    m_Font: {fileID: 12800000, guid: 01963ec46c1abd547bafd0ac51a0fc9d, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 1
@@ -858,7 +875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: KILLS
+  m_Text: ' SCORE: '
 --- !u!222 &2013167790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -867,6 +884,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013167787}
   m_CullTransparentMesh: 1
+--- !u!114 &2013167791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013167787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1.4, y: -1.4}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &999717467103332820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -885,6 +917,10 @@ PrefabInstance:
     - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164730770, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1164730773, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
       propertyPath: gamePrefab

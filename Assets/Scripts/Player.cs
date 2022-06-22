@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
         
-        transform.position += new Vector3(moveX,0f,0f)*Time.deltaTime*speed;
-        transform.position += new Vector3(0f,moveY,0f)*Time.deltaTime*speed;
+        transform.position += new Vector3(moveX,moveY,0f)*Time.deltaTime*speed;
+        // transform.position += new Vector3(0f,moveY,0f)*Time.deltaTime*speed;
     }
 
     void OnCollisionEnter(Collision col)

@@ -2,16 +2,12 @@ using UnityEngine;
 
 public class MousePointer : MonoBehaviour
 {
-    [SerializeField]
-    Camera mainCamera;
-    [SerializeField]
-    LayerMask layerMask;
-
+    public static Vector3 pointQ;
+    [SerializeField] Camera mainCamera;
     void Update()
     {
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit) ){
-            transform.position = raycastHit.point;
-        }
+        transform.position = Input.mousePosition;
+        Debug.Log(mainCamera.ScreenToWorldPoint(Input.mousePosition));
+        pointQ = mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 }

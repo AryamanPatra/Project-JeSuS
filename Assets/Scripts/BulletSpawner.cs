@@ -5,26 +5,30 @@ public class BulletSpawner : MonoBehaviour
     public Transform Bullet;
     public Transform BulletHolder;
     public static float bulletSpeed=100f;
-    public float angleDegree = 90f;
+    float angleRadian;
     Transform BulletTrans;
     Rigidbody BulletRB;
-
+    Vector3 pointP;
     
 
     void Update()
     {
+        pointP = transform.position;
+        angleRadian = Mathf.Atan((MousePointer.pointQ.y-pointP.y)/(MousePointer.pointQ.x-pointP.x));
         if (Input.GetButtonDown("Fire1")) 
         {
             BulletTrans = Instantiate(Bullet, BulletHolder.position, BulletHolder.rotation);
+            Debug.Log("BSpawner: "+BulletTrans.transform.position);
+            Debug.Log("Mouse: "+Input.mousePosition);
             BulletRB = BulletTrans.GetComponent<Rigidbody>();
-            AddForceAtAngle(bulletSpeed,angleDegree,BulletRB);
+            AddForceAtAngle(bulletSpeed,angleRadian);
         }   
     }
-    void AddForceAtAngle(float force, float angle, Rigidbody BulletRB)
+    void AddForceAtAngle(float force, float angle)
     {
-        float xcomponent = Mathf.Cos(angle * Mathf.PI / 180) * force;
-        float ycomponent = Mathf.Sin(angle * Mathf.PI / 180) * force;
+        float xcomponent = Mathf.Cos(angle) * force;
+        float ycomponent = Mathf.Sin(angle) * force;
         
-        BulletRB.AddForce(ycomponent, -45f, xcomponent);
+        BulletRB.AddForce(xcomponent, ycomponent, 0f);
     }
 }

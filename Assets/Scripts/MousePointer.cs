@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MousePointer : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class MousePointer : MonoBehaviour
     Camera mainCamera;
     [SerializeField]
     LayerMask layerMask;
+    [SerializeField]
+    Image cursor;
 
     void Update()
     {
@@ -13,5 +16,6 @@ public class MousePointer : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit raycastHit) ){
             transform.position = raycastHit.point;
         }
+        cursor.transform.position += Input.mousePosition;
     }
 }

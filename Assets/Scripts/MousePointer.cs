@@ -11,6 +11,10 @@ public class MousePointer : MonoBehaviour
     Image cursor;
     private static Vector3 hitLocation;
 
+    void Start()
+    {
+        Cursor.visible = false;
+    }
     void Update()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);

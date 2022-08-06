@@ -40,9 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: HitBoard
     uniqueID: 1024414645
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

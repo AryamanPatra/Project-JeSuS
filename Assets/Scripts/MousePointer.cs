@@ -27,9 +27,9 @@ public class MousePointer : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             hitLocation = transform.position;
-            // Debug.Log("HitLocation: "+transform.position);
         }
-        cursor.transform.position = Input.mousePosition; // For Game Cursor Movement
+        cursor.transform.position = Input.mousePosition; 
+        // For Game Cursor Movement
     }
 
     public static Vector3 GetHitLocation()

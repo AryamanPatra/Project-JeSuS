@@ -22,7 +22,7 @@ public class BulletSpawner : MonoBehaviour
             BulletRB = BulletTrans.GetComponent<Rigidbody>();
 
             fireLocation = transform.position;
-            // Debug.Log("FireLocation: "+fireLocation);
+            //Need fireLocation to find the angle
             angleDegree = FindTheAngle();
             AddForceAtAngle(bulletSpeed,angleDegree,BulletRB);
         }   
@@ -35,7 +35,7 @@ public class BulletSpawner : MonoBehaviour
         
         BulletRB.AddForce(xcomponent,ycomponent,0f);
     }
-    float FindTheAngle()
+    float FindTheAngle() 
     {
         Vector3 P = fireLocation;
         Vector3 Q = MousePointer.GetHitLocation();

@@ -27,7 +27,7 @@ public class BulletSpawner : MonoBehaviour
             AddForceAtAngle(bulletSpeed,angleDegree,BulletRB);
         }   
     }
-    void AddForceAtAngle(float force, float angle)
+    void AddForceAtAngle(float force, float angle, Rigidbody BulletRB)
     {
 
         float xcomponent = Mathf.Cos(angle * Mathf.PI / 180) * force;

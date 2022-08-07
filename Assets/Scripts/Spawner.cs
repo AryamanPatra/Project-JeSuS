@@ -4,7 +4,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject gamePrefab;
-    public float respawnTime = 2.0f;
+    public float respawnTime = 4.0f;
     private Vector3 screenBounds;
     
     

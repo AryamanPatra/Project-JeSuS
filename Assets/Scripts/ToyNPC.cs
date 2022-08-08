@@ -3,7 +3,7 @@ using TMPro;
 
 public class ToyNPC : MonoBehaviour
 {
-    public float health = 20.0f;
+    public float health = 13.4f;
     public float speed = 1.0f;
     [SerializeField]
     public TextMeshPro healthCard;    

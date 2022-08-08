@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,9 +23,9 @@ public class ScoreManager : MonoBehaviour
         highscoreText.text = " Highscore:" + highscore; 
     }
 
-    public void AddPoint()
+    public void AddPoint(int points)
     {
-        score++;
+        score+=points;
         scoreText.text = " SCORE:"+score;
         if (score > highscore)
             PlayerPrefs.SetInt("highscore",score);

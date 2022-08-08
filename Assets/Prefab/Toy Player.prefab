@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219658647}
-  m_LocalRotation: {x: -0.00000004470348, y: 0.40505826, z: -0.00000019371507, w: 0.91429085}
-  m_LocalPosition: {x: 0.3751022, y: 0.4885311, z: -0.06468365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09, y: 0.56, z: 0}
   m_LocalScale: {x: 8.680497, y: 0.73374903, z: 8.680496}
   m_Children: []
   m_Father: {fileID: 1164730769}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27.094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1164730768
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164730768}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -141,8 +141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 8668775772878179606, guid: c28925839981f7b46ba3835ae6f204e2, type: 3}
   BulletHolder: {fileID: 219658648}
-  bulletSpeed: 0
-  angleDegree: 45
 --- !u!1 &999717466733194084
 GameObject:
   m_ObjectHideFlags: 0

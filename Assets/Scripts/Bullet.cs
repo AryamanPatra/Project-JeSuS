@@ -14,10 +14,13 @@ public class Bullet : MonoBehaviour
         if (col.gameObject.tag == "Enemy"){
             ToyNPC hit = col.gameObject.GetComponent<ToyNPC>();
             hit.health -= DAMAGE;
+            hit.healthCard.text = hit.health.ToString();
             if (hit.health <= 0f)
+            {
                 Destroy(col.gameObject);
+                ScoreManager.instance.AddPoint(5);
+            }
             Destroy(gameObject);
-            ScoreManager.instance.AddPoint();
         }
     }
     

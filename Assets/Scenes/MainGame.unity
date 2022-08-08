@@ -1175,7 +1175,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1443,58 +1443,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164730770, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164730773, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: gamePrefab
-      value: 
-      objectReference: {fileID: 8668775772878179610, guid: c28925839981f7b46ba3835ae6f204e2, type: 3}
-    - target: {fileID: 1164730773, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: angleDegree
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164730773, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: bulletSpeed
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 999717466733194080, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
       propertyPath: m_RootOrder
       value: 2

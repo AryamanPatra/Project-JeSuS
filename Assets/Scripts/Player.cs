@@ -25,12 +25,15 @@ public class Player : MonoBehaviour
         moveY = Input.GetAxis("Vertical");
         
         transform.position += new Vector3(moveX,moveY,0f)*Time.deltaTime*speed;
-        // transform.position += new Vector3(0f,moveY,0f)*Time.deltaTime*speed;
     }
 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == ENEMY_TAG || col.gameObject.tag == GROUND_TAG)
+        {
+            Destroy(col.gameObject);
+            ScoreManager.instance.AddPoint(5);
             Destroy(gameObject);
+        }
     }
 }

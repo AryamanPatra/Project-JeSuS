@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
             {
                 Destroy(col.gameObject);
                 ScoreManager.instance.AddPoint(5);
+                Spawner.onScreenEnemy--;
             }
             Destroy(gameObject);
         }

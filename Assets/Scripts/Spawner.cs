@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
     public GameObject gamePrefab;
     public float respawnTime = 4.0f;
     private Vector3 screenBounds;
+    public static int onScreenEnemy = 0;
     
     
     void Start()
@@ -15,9 +16,13 @@ public class Spawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject a = Instantiate(gamePrefab) as GameObject;
-        a.transform.position = new Vector3(17.1f,Random.Range(1,4),1.828483f); 
-        a.GetComponent<ToyNPC>().speed = Random.Range(1.0f,4.0f);
+        if (onScreenEnemy<3)
+        {
+            GameObject a = Instantiate(gamePrefab) as GameObject;
+            onScreenEnemy++;
+            a.transform.position = new Vector3(17.1f,Random.Range(1,4),1.828483f); 
+            a.GetComponent<ToyNPC>().speed = Random.Range(1.0f,4.0f);
+        }
     }
 
     IEnumerator ToySpawnTimer()

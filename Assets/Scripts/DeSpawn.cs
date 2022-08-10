@@ -5,6 +5,8 @@ public class DeSpawn : MonoBehaviour
     
     void OnTriggerEnter(Collider cold)
     {
+        if (cold.tag=="Enemy")
+            Spawner.onScreenEnemy--;
         Destroy(cold.gameObject);
     }
 

@@ -257,7 +257,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -774, y: -490}
+||||||| cfc6c9b
+  m_AnchoredPosition: {x: -910, y: -490}
+=======
+  m_AnchoredPosition: {x: -588, y: -421.4}
+>>>>>>> health
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &705507993
@@ -711,7 +717,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Highscore:'
@@ -958,7 +964,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1211,57 +1217,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 219658648, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164730770, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164730773, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: gamePrefab
-      value: 
-      objectReference: {fileID: 8668775772878179610, guid: c28925839981f7b46ba3835ae6f204e2, type: 3}
-    - target: {fileID: 1164730773, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: angleDegree
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164730773, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
-      propertyPath: bulletSpeed
-      value: 50
+    - target: {fileID: 1034408786, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 999717466733194080, guid: 471fb840f4c8917448af60f68c6e548a, type: 3}
       propertyPath: m_RootOrder

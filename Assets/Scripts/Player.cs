@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -7,10 +8,15 @@ public class Player : MonoBehaviour
     private string ENEMY_TAG = "Enemy",GROUND_TAG = "Ground";
     public bool isJump;
     Rigidbody rb;
+    [HideInInspector]
+    public float health=20.0f;
+    [SerializeField]
+    public TextMeshPro healthPlayer;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        healthPlayer.text = health.ToString();
     }
 
     void FixedUpdate()

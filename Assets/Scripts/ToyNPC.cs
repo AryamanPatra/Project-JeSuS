@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class ToyNPC : MonoBehaviour
 {
+    public float health = 13.4f;
     public float speed = 1.0f;
-    // Start is called before the first frame update
+    [SerializeField]
+    public TextMeshPro healthCard;    
+
     void Start()
     {
-        
+        healthCard.text = health.ToString();
     }
-
     // Update is called once per frame
     void Update()
     {

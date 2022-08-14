@@ -24,6 +24,20 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void OnTriggerEnter(Collider cold)
+    {
+        if (cold.gameObject.name == "Toy Player")
+        {
+            Player hit = cold.gameObject.GetComponent<Player>();
+            hit.health -= DAMAGE;
+            hit.healthPlayer.text = hit.health.ToString();
+            if (hit.health <= 0f)
+            {
+                Destroy(cold.gameObject);
+            }
+            Destroy(gameObject);
+        }
+    }
     
     IEnumerator DestroyBullet()
     {

@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 2077396000}
   - component: {fileID: 2077395999}
   - component: {fileID: 2077395998}
-  - component: {fileID: 2077395997}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -127,20 +126,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2077395997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077395995}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c3aed1918932bf4fa1a5658fdf69115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 8668775772878179606, guid: c28925839981f7b46ba3835ae6f204e2, type: 3}
-  BulletHolder: {fileID: 1464484024}
 --- !u!1 &3309727265010959591
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +272,8 @@ MonoBehaviour:
   health: 13.4
   speed: 1
   healthCard: {fileID: 4910217224064787972}
+  BulletHolder: {fileID: 1464484024}
+  bullet: {fileID: 7837591006191315317, guid: 3b319f9530152884fb5d1acff26bff14, type: 3}
 --- !u!1001 &3378321250310100118
 PrefabInstance:
   m_ObjectHideFlags: 0

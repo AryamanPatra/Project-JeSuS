@@ -3,6 +3,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    public static Vector3 playerLocation;
     public float speed = 1.6f;
     private float moveX,moveY;
     private const string ENEMY_TAG = "Enemy",GROUND_TAG = "Ground";
@@ -30,7 +31,10 @@ public class Player : MonoBehaviour
         transform.position += new Vector3(moveX,moveY,0f)*Time.deltaTime*speed;
         
     }
-
+    void LateUpdate()
+    {
+        playerLocation = transform.position;
+    }
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == ENEMY_TAG || col.gameObject.tag == GROUND_TAG)

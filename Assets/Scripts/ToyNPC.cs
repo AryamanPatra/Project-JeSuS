@@ -13,12 +13,12 @@ public class ToyNPC : MonoBehaviour
     [SerializeField]
     GameObject bullet;
     float angle=0.0f; 
-    float bulletSpeed =100f;  
+    float bulletSpeed =100f; 
+    public bool checkCoroutine = true; 
 
     void Start()
     {
         healthCard.text = health.ToString();
-        StartCoroutine(Shoot());
     }
     // Update is called once per frame
     void Update()
@@ -30,13 +30,16 @@ public class ToyNPC : MonoBehaviour
 */
     public IEnumerator Shoot()
     {
-        while (true)
+        while (checkCoroutine)
         {
             yield return new WaitForSecondsRealtime(Random.Range(2.0f,5.0f));
-            GameObject b = Instantiate(bullet) as GameObject;
-            b.transform.position = BulletHolder.position;
-            angle = FindTheAngle();
-            AddForceAtAngle(bulletSpeed,angle,b.GetComponent<Rigidbody>());
+            if (BulletHolder != null)
+            {
+                GameObject b = Instantiate(bullet) as GameObject;
+                b.transform.position = BulletHolder.position;
+                angle = FindTheAngle();
+                AddForceAtAngle(bulletSpeed,angle,b.GetComponent<Rigidbody>());
+            }
         }
     }
     void AddForceAtAngle(float force, float angle, Rigidbody BulletRB)

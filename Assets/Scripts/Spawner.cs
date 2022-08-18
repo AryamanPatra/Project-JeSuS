@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         {
             GameObject a = Instantiate(gamePrefab) as GameObject;
             onScreenEnemy++;
-            a.transform.position = new Vector3(17.1f,Random.Range(1,6),1.828483f); 
+            a.transform.position = new Vector3(transform.position.x,Random.Range(-2f,6.5f),transform.position.z); 
             a.GetComponent<ToyNPC>().speed = Random.Range(1.0f,4.0f);
         }
     }

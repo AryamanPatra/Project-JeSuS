@@ -28,11 +28,11 @@ public class ToyNPC : MonoBehaviour
 /*
     Shooting bullets at Player given below
 */
-    IEnumerator Shoot()
+    public IEnumerator Shoot()
     {
         while (true)
         {
-            yield return new WaitForSecondsRealtime(Random.Range(1.5f,4));
+            yield return new WaitForSecondsRealtime(Random.Range(2.0f,5.0f));
             GameObject b = Instantiate(bullet) as GameObject;
             b.transform.position = BulletHolder.position;
             angle = FindTheAngle();

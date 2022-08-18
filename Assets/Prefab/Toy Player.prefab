@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219658647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0.56, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.505, z: -0.02}
   m_LocalScale: {x: 8.680497, y: 0.73374903, z: 8.680496}
   m_Children: []
   m_Father: {fileID: 1164730769}
@@ -64,7 +64,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.93, y: 0.17}
+  m_AnchoredPosition: {x: -0.64, y: 0.17}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1034408788
@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 1164730771}
   - component: {fileID: 1164730770}
   - component: {fileID: 1164730773}
+  - component: {fileID: 1206660873}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -311,6 +312,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 8668775772878179606, guid: c28925839981f7b46ba3835ae6f204e2, type: 3}
   BulletHolder: {fileID: 219658648}
+--- !u!54 &1206660873
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164730768}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &999717466733194084
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +422,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999717466733194084}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -439,7 +456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64deb19a831b1f04ea0077671b80ee04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  isJump: 0
+  speed: 10
+  moveX: 0
+  moveY: 0
   health: 20
   healthPlayer: {fileID: 1034408787}

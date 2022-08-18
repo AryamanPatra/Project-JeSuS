@@ -3,11 +3,12 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
     public static Vector3 playerLocation;
-    public float speed = 1.6f;
-    private float moveX,moveY;
+    public float speed = 10.0f;
+    [HideInInspector]
+    public float moveX,moveY;
     private const string ENEMY_TAG = "Enemy",GROUND_TAG = "Ground";
-    public bool isJump;
     Rigidbody rb;
     [HideInInspector]
     public float health=20.0f;
@@ -16,6 +17,10 @@ public class Player : MonoBehaviour
     Vector3 screenPos;
     Vector3 viewPos;
 
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();

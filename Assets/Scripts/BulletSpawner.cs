@@ -18,7 +18,7 @@ public class BulletSpawner : MonoBehaviour
             BulletTrans = Instantiate(Bullet, BulletHolder.position, BulletHolder.rotation);
             BulletRB = BulletTrans.GetComponent<Rigidbody>();
 
-            fireLocation = transform.position;
+            fireLocation = BulletHolder.transform.position;
             //Needed for finding shooting angle
             angleDegree = FindTheAngle();
             AddForceAtAngle(bulletSpeed,angleDegree,BulletRB);

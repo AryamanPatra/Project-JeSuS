@@ -12,7 +12,7 @@ public class EnemyBullet : MonoBehaviour
 
     void OnTriggerEnter(Collider cold)
     {
-        if (cold.gameObject.name=="Toy Player")
+        if (cold.gameObject.tag=="Player")
         {
             Player hit = cold.gameObject.GetComponent<Player>();
             hit.health -= DAMAGE;
@@ -27,7 +27,7 @@ public class EnemyBullet : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSecondsRealtime(7);
+            yield return new WaitForSecondsRealtime(4);
             Destroy(gameObject);
         }
     }

@@ -274,6 +274,7 @@ MonoBehaviour:
   healthCard: {fileID: 4910217224064787972}
   BulletHolder: {fileID: 1464484024}
   bullet: {fileID: 7837591006191315317, guid: 3b319f9530152884fb5d1acff26bff14, type: 3}
+  checkCoroutine: 1
 --- !u!1001 &3378321250310100118
 PrefabInstance:
   m_ObjectHideFlags: 0

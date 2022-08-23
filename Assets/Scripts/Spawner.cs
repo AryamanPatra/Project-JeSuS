@@ -48,7 +48,7 @@ public class Spawner : MonoBehaviour
     }
     private void SpawnCloud(float j)
     {
-        int i = (int)Random.Range(0,3); 
+        int i = (int)Random.Range(0,6); 
         GameObject c = Instantiate(cArray[i]) as GameObject;
         c.transform.position = new Vector3(transform.position.x+800,-59.5f,j);
         size = Random.Range(0.5f,1.7f);

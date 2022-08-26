@@ -14,7 +14,13 @@ public class Bullet : MonoBehaviour
         if (col.gameObject.tag == "Enemy"){
             ToyNPC hit = col.gameObject.GetComponent<ToyNPC>();
             hit.health -= DAMAGE;
-            hit.healthCard.text = hit.health.ToString();
+            switch (hit.health)
+            {
+                case 5:
+                    hit.healthCard.text = "-";
+                    hit.healthCard.color = Color.red; 
+                    break;
+            }
             if (hit.health <= 0f)
             {
                 Destroy(col.gameObject);

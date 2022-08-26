@@ -19,7 +19,8 @@ public class ToyNPC : MonoBehaviour
 
     void Start()
     {
-        healthCard.text = health.ToString();
+        healthCard.text = "--";
+        healthCard.color = Color.yellow;
     }
     // Update is called once per frame
     void Update()

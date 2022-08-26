@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
-        healthPlayer.text = health.ToString();
+        healthPlayer.text = "----";
         screenPos = Camera.main.WorldToScreenPoint(new Vector3(Screen.width,Screen.height,transform.position.z));    
     }
 

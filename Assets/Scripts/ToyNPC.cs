@@ -4,7 +4,8 @@ using System.Collections;
 
 public class ToyNPC : MonoBehaviour
 {
-    public float health = 13.4f;
+    [HideInInspector]
+    public float health = 10f;
     public float speed = 1.0f;
     [SerializeField]
     public TextMeshPro healthCard; 
@@ -32,7 +33,7 @@ public class ToyNPC : MonoBehaviour
     {
         while (checkCoroutine)
         {
-            yield return new WaitForSecondsRealtime(Random.Range(2.0f,5.0f));
+            yield return new WaitForSecondsRealtime(Random.Range(1.5f,3.5f));
             if (BulletHolder != null)
             {
                 GameObject b = Instantiate(bullet) as GameObject;

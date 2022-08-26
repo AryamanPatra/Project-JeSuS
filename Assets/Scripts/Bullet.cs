@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
-    const float DAMAGE = 6.7f;
+    const float DAMAGE = 5f;
     void Start()
     {
         StartCoroutine(DestroyBullet());

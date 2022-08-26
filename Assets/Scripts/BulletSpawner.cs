@@ -8,7 +8,6 @@ public class BulletSpawner : MonoBehaviour
     float angleDegree;
     Transform BulletTrans;
     Rigidbody BulletRB;
-
     Vector3 fireLocation;
     
 
@@ -17,12 +16,10 @@ public class BulletSpawner : MonoBehaviour
         if (Input.GetButtonDown("Fire1")) 
         {
             BulletTrans = Instantiate(Bullet, BulletHolder.position, BulletHolder.rotation);
-            Debug.Log("BSpawner: "+BulletTrans.transform.position);
-            Debug.Log("Mouse: "+Input.mousePosition);
             BulletRB = BulletTrans.GetComponent<Rigidbody>();
 
-            fireLocation = transform.position;
-            //Need fireLocation to find the angle
+            fireLocation = BulletHolder.transform.position;
+            //Needed for finding shooting angle
             angleDegree = FindTheAngle();
             AddForceAtAngle(bulletSpeed,angleDegree,BulletRB);
         }   
@@ -44,7 +41,6 @@ public class BulletSpawner : MonoBehaviour
             theta += 180;
         else if (theta<0 && (Q.y-P.y>0))
             theta += 180;
-        Debug.Log(theta);
         return theta;
     }
 }

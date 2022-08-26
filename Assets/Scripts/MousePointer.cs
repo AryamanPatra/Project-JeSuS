@@ -11,6 +11,7 @@ public class MousePointer : MonoBehaviour
     [SerializeField]
     Image cursor;
     private static Vector3 hitLocation;
+    // Needed for finding shooting angle
 
     void Start()
     {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BulletSpawner : MonoBehaviour
 {
@@ -9,12 +10,18 @@ public class BulletSpawner : MonoBehaviour
     Transform BulletTrans;
     Rigidbody BulletRB;
     Vector3 fireLocation;
-    
+    bool fired=false;
+
+    void Start()
+    {
+        StartCoroutine(Cooldown());
+    }
 
     void LateUpdate()
     {
-        if (Input.GetButtonDown("Fire1")) 
+        if (fired==false & Input.GetButtonDown("Fire1")) 
         {
+            fired = true;
             BulletTrans = Instantiate(Bullet, BulletHolder.position, BulletHolder.rotation);
             BulletRB = BulletTrans.GetComponent<Rigidbody>();
 
@@ -22,8 +29,19 @@ public class BulletSpawner : MonoBehaviour
             //Needed for finding shooting angle
             angleDegree = FindTheAngle();
             AddForceAtAngle(bulletSpeed,angleDegree,BulletRB);
-        }   
+        }
+        
     }
+    
+    IEnumerator Cooldown()
+    {
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(0.7f);
+            fired = false;   
+        }
+    }
+
     void AddForceAtAngle(float force, float angle, Rigidbody BulletRB)
     {
 

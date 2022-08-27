@@ -16,7 +16,19 @@ public class EnemyBullet : MonoBehaviour
         {
             Player hit = cold.gameObject.GetComponent<Player>();
             hit.health -= DAMAGE;
-            hit.healthPlayer.text = hit.health.ToString();
+            switch (hit.health)
+            {
+                case 15:
+                    hit.healthPlayer.text = "---"; 
+                    hit.healthPlayer.color=Color.yellow; 
+                    break;
+                case 10:
+                    hit.healthPlayer.text = "--"; break;
+                case 5:
+                    hit.healthPlayer.text = "-"; 
+                    hit.healthPlayer.color=Color.red;
+                    break;
+            }
             if (hit.health<=0)
                 Destroy(cold.gameObject);
             Destroy(gameObject);
